@@ -49,7 +49,7 @@ export default function Room(){
     },[myStream]);
 
     // handling the call acceptance by the other user
-    const handleCallAccepted = useCallback( async({from, ans}: any)=>{    
+    const handleCallAccepted = useCallback( async({ans}: any)=>{    
         await  peer.setLocalDescription(ans);
         // console.log("call Accepted");
         sendStreams();
@@ -86,7 +86,7 @@ export default function Room(){
         socket.emit('peer:nego:done', {to: from, ans});
     }, [socket])
 
-    const handleNegoFinal = useCallback(async({from, ans}:any)=>{
+    const handleNegoFinal = useCallback(async({ans}:any)=>{
         await peer.setLocalDescription(ans);
     },[])
 

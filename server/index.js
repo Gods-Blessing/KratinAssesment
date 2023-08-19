@@ -5,7 +5,11 @@ var cors = require('cors')
 const http = require('http');
 const server = http.createServer(app);
 const {Server} = require('socket.io');
-const io = new Server(server);
+const io = new Server(server, {
+    cors: {
+      origin: '*',
+    }
+});
 
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
@@ -21,7 +25,7 @@ app.get('/', (req, res)=>{
 io.on('connection', (socket)=>{
     console.log("User connected -", socket.id );
     socket.on("room:join", (data)=>{
-        console.log(data.email, " --", data.roomid )
+        // console.log(data.email, " --", data.roomid )
 
         io.to(data.roomid).emit('user:joined', { email: data.email, id: socket.id});
         

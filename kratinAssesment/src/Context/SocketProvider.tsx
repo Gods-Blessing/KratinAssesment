@@ -12,7 +12,7 @@ console.log(import.meta.env.VITE_URL)
 
 export const SocketProvider = ({children}:any)=>{
     const socket: any = useMemo(()=> io(import.meta.env.VITE_URL, {
-        transports:['websocket', 'polling']
+        transports:['websocket']
     }), []);
 
     

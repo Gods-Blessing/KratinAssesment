@@ -17,7 +17,7 @@ export default function VideoCall(){
     }, [email, roomid, socket])
 
     const handleRoomJoin =useCallback((data:any)=>{
-        const {email, roomid}:any = data;
+        const {roomid}:any = data;
         // console.log(email, 'and', roomid);
         navigate(`/room/${roomid}`);
     }, [navigate]);

@@ -5,12 +5,7 @@ var cors = require('cors')
 const http = require('http');
 const server = http.createServer(app);
 const {Server} = require('socket.io');
-const io = new Server(server, {
-    cors: {
-      origin: '*',
-      methods: ["GET", "POST"],
-    }
-});
+const io = new Server(server, {cors: true});
 
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));

@@ -7,7 +7,7 @@ const server = http.createServer(app);
 const {Server} = require('socket.io');
 const io = new Server(server, {
     cors: {
-      origin: "https://kratin-assesment-fe.vercel.app/",
+      origin: "https://kratin-assesment-be.vercel.app/",
       allowedHeaders: ["my-custom-header"],
       credentials: true
     }

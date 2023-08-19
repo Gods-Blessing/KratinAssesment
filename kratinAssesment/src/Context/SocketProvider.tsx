@@ -8,9 +8,10 @@ export const useSocket = ()=>{
     return socket;
 }
 // const socket: any = io('localhost:3000');
+console.log(import.meta.env.VITE_URL)
 
 export const SocketProvider = ({children}:any)=>{
-    const socket: any = useMemo(()=> io('localhost:3000'), []);
+    const socket: any = useMemo(()=> io(import.meta.env.VITE_URL), []);
 
     
     return(

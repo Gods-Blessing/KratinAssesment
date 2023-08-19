@@ -1,22 +1,27 @@
-// const express = require('express');
-// const app = express();
-// const port = 3000;
-// const http = require('http');
-// const server = http.createServer(app);
+const express = require('express');
+const port = process.env.PORT || 3000;
+const app = express();
+var cors = require('cors')
+const http = require('http');
+const server = http.createServer(app);
 const {Server} = require('socket.io');
-const io = new Server(3000, {cors: true});
+const io = new Server(server, {cors: true});
+
+app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 
-// app.get('/', (req, res)=>{
-//     res.end("heyy");
-//     return;
-// })
+app.get('/', (req, res)=>{
+    res.end("heyy");
+    // return;
+})
 
 
 io.on('connection', (socket)=>{
     console.log("User connected -", socket.id );
     socket.on("room:join", (data)=>{
-        // console.log(data.email, " --", data.roomid )
+        console.log(data.email, " --", data.roomid )
 
         io.to(data.roomid).emit('user:joined', { email: data.email, id: socket.id});
         
@@ -47,11 +52,11 @@ io.on('connection', (socket)=>{
 
 
 
-// app.listen(port, (err)=>{
-//     if(err){
-//         console.log("error while starting the server");
-//         return
-//     }
+server.listen(port, (err)=>{
+    if(err){
+        console.log("error while starting the server");
+        return
+    }
 
-//     console.log("server started on port: ", port);
-// })
+    console.log("server started on port: ", port);
+})

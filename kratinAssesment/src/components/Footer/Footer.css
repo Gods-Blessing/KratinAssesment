@@ -1,0 +1,81 @@
+footer{
+    padding: 3rem 4rem;
+    background-color: rgba(255, 111, 0, 0.45);
+}
+
+.footer-div-1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+/* .footer-div-1>div>a>img{
+    margin-left: 1rem;
+} */
+
+.social-icons{
+    width: 1.8rem;
+    margin-left: 1rem;
+}
+
+.social-icons:hover{
+    transform: scale(1.2);
+}
+
+
+/* --------------footer div 2---------------- */
+.footer-div-2{
+    display: flex;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 0rem 0rem 1rem 0rem;
+    /* gap: 3rem; */
+    justify-content: space-between;
+}
+
+.address>h2{
+    margin: 1rem 0rem;
+}
+
+.address>p{
+    margin: 0.5rem 0rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.links-for-pages{
+    display: flex;
+    margin-top: 1rem;
+    gap: 5rem;
+}
+
+.links-for-pages >ul{
+    list-style: none;
+}
+
+.links-for-pages >ul>h3{
+    margin-bottom: 1rem;
+    font-weight: 800;
+    font-size: 1.8rem;
+    text-decoration: underline;
+}
+
+.links-for-pages >ul>li{
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0.5rem 0rem;
+}
+
+.other-links{
+    margin-top: 1rem;
+    display: flex;
+}
+
+.other-links>p{
+    border-right: 1px solid black;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}

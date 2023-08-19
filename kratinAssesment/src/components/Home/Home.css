@@ -1,0 +1,130 @@
+.div-1{
+    background-image: url(../../assets//olderpeoplesImg/firstimg.jpg);
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div-1-1{
+    padding: 2rem 3rem 8rem 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: relative;
+}
+
+.heading{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.sub-heading{
+    font-size: 1.8rem;
+
+}
+
+.reach{
+    position: absolute;
+    bottom: -20%;
+    left: 10%;
+    right: 10%;
+    justify-content: space-between;
+    background-color: rgb(171, 47, 47);
+    border-radius: 2rem;
+    padding: 2rem 3rem;
+    gap: 2rem;
+}
+
+.reach>div{
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.numbers{
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.worked-on{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+
+/* ---------------div-2----------------------- */
+.div-2{
+    padding: 7rem 3rem 6rem 3rem;
+
+}
+
+.div-2-heading{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+/* -----------------div-3----------------------- */
+.div-3{
+    padding: 2rem 5rem;
+    background-color: rgba(141, 66, 39, 0.2);
+}
+
+.div-3>p{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.demographic-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.demographic-container>div>div{
+    width: 30%;
+    height: 20vh;
+    border-radius: 50%;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.demographic-container>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.demographic-container>div>p{
+    font-size: 1.3rem;
+    font-weight: 600;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.count{
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.green{
+    background-color: green;
+}
+
+.blue{
+    background-color: rgb(64, 15, 179);
+}
+
+.maroon{
+    background-color: rgb(165, 14, 14);
+}

@@ -1,0 +1,8 @@
+.spacer{
+    height: 10vh;
+    /* background-color: black; */
+}
+
+.flex{
+    display: flex;
+}

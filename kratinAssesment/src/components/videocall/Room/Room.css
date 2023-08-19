@@ -1,0 +1,26 @@
+.heading-of-room{
+    text-align: center;
+}
+
+.btn{
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.btn-divs{
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+}
+
+.mystream{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.mystream>div>h4{
+    text-align: center;
+}
+

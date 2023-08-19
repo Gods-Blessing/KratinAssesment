@@ -1,0 +1,43 @@
+/* #video-call{
+    height: 80vh;
+    width: 80vw;
+    background-color: gray;
+} */
+
+.video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container>form{
+    display: flex;
+    flex-direction: column;
+}
+
+.video-container>form>h1{
+    padding: 2rem;
+    text-align: center;
+}
+
+.video-container>form>label{
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.video-container>form>input{
+    margin-bottom: 2rem;
+    padding: 0.5rem 0.5rem;
+    width: 30vw;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.joining-btn{
+    align-self: center;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    cursor: pointer;
+}

@@ -5,7 +5,13 @@ var cors = require('cors')
 const http = require('http');
 const server = http.createServer(app);
 const {Server} = require('socket.io');
-const io = new Server(server);
+const io = new Server(server, {
+    cors: {
+      origin: "https://kratin-assesment-fe.vercel.app/",
+      allowedHeaders: ["my-custom-header"],
+      credentials: true
+    }
+  });
 
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));

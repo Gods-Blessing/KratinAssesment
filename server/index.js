@@ -16,7 +16,7 @@ const io = new Server(3000, {cors: true});
 io.on('connection', (socket)=>{
     console.log("User connected -", socket.id );
     socket.on("room:join", (data)=>{
-        console.log(data.email, " --", data.roomid )
+        // console.log(data.email, " --", data.roomid )
 
         io.to(data.roomid).emit('user:joined', { email: data.email, id: socket.id});
         
